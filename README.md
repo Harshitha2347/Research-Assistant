@@ -14,7 +14,6 @@ research-assistant/
 
 - **Multi-PDF chat** — upload any number of PDFs and ask questions across all of them, or scope a conversation to specific documents.
 - **Hybrid retrieval** — vector search (Gemini embeddings) + BM25, fused with Reciprocal Rank Fusion, cross-encoder reranked, with query expansion/decomposition for weak or multi-part questions.
-- **On-demand figure understanding** — figures, charts, and diagrams are extracted and stored at upload time, but are only ever read by a vision model **when a question actually asks about one** (keyword-matched shortlist → Gemini vision). Nothing is embedded or vision-analysed just because it exists.
 - **Web-search fallback** — if your documents genuinely don't answer a question, the assistant says so and (unless you've scoped to specific documents or disabled it) falls back to a live web search via Tavily.
 - **Document tools** — per-document summarise and cross-document compare, run as background jobs so the UI never blocks.
 - **RAG evaluation** — RAGAS-based faithfulness / answer relevancy / context precision / context recall scoring on your own conversations.
