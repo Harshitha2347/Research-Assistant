@@ -1,8 +1,3 @@
-# --- CPU-only PyTorch -------------------------------------------------
-# Installed explicitly, before sentence-transformers/FlagEmbedding pull
-# in their own torch dependency, so pip resolves the small CPU-only wheel
-# instead of a much larger CUDA-enabled build (there's no GPU on Render).
-# This meaningfully cuts both install size and runtime memory footprint.
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.4.1+cpu
 
@@ -15,18 +10,16 @@ pydantic-settings==2.5.2
 # LlamaIndex core + integrations
 langchain-core==0.2.43
 langsmith==0.1.147
-langchain-huggingface
 llama-index-core==0.11.14
 llama-index-vector-stores-qdrant==0.3.0
 llama-index-retrievers-bm25==0.3.0
-llama-index-embeddings-huggingface==0.3.1
 llama-index-postprocessor-flag-embedding-reranker==0.2.0
 
 # Vector DB
 qdrant-client==1.11.2
 
-# Embeddings / rerankers (lightweight, local, no API)
-sentence-transformers==3.1.1
+# Reranker (lightweight, local, no API — only the embedding step was
+# moved to the hosted Gemini API)
 FlagEmbedding==1.2.11
 
 # PDF + image extraction
