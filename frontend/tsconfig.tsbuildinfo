@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/api/client.ts","./src/context/authcontext.tsx","./src/context/jobscontext.tsx","./src/hooks/usevoice.ts","./src/pages/chat.tsx","./src/pages/documents.tsx","./src/pages/evaluation.tsx","./src/pages/login.tsx","./src/types/index.ts"],"version":"5.9.3"}
